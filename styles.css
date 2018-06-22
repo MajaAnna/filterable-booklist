@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    background-color: #ccc;
+}
+
+.format{
+    padding:20px;
+    background-color: blue;
+}
+
+.books{
+    padding:20px;
+    background-color: pink;
+}
+
+@media (min-width: 500px){
+    .container{
+        max-width: 800px;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns: 1fr 3fr;
+    }
+}
