@@ -4,26 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <title>Filterable book list</title>
 </head>
 <body>
-    <div class="container">
+    <div class="main-container">
         <section class="format">
-            Format
-            Price
+            <div class="container">
+                <h2 class="subtitle">Format</h2>
+                <p><input type="checkbox" value="e-book" id="e-bookInput">E-book</p>
+                <p><input type="checkbox" value="paperbook" id="paperbookInput">Paperbook</p>
+                <h2 class="subtitle">Price</h2>
+            </div>
         </section>
     
     
         <section class="books">
-            baba
             <section class="filter">
-    
+                <div class="container">
+                    <select name="" id="sorting">
+                        <option value="default-option">Sort by <i class="fas fa-caret-down"></i></option>
+                        <option value="name-sorting" id="name-sorting">Author's name</option>
+                        <option value="title-sorting" id="title-sorting">Book title</option>
+                    </select>
+                </div>
             </section>
+
             <section class="booklist">
-    
+                <div class="container">
+                    <table class="table">
+                        <thead></thead>
+                        <tbody>
+                            <tr data-title="Eloquent JavaScript" data-author="Marijn Haverbeke" data-price="31.99" data-version="paperback">
+                                <td class="title">Eloquent JavaScript</td>
+                                <td class="author">Marijn Haverbeke</td>
+                                <td class="price">$31.99</td>
+                                <td class="version">paperback</td>
+                            </tr>
+                            <tr data-title="The good Parts" data-author="Douglas Crockford" data-price="19.90" data-version="paperback">
+                                <td class="title">The good Parts</td>
+                                <td class="author">Douglas Crockford</td>
+                                <td class="price">$19.90</td>
+                                <td class="version">paperback</td>
+                            </tr>
+                            <tr data-title="The Definitive Guide" data-author="David Flanagan" data-price="29" data-version="ebook">
+                                <td class="title">The Definitive Guide</td>
+                                <td class="author">Douglas Crockford</td>
+                                <td class="price">$29</td>
+                                <td class="version">e-book</td>
+                            </tr>
+                            <!-- 
+    You don´t know JS, Kyle Simpson (paperback) - $2.99
+    Clean Code: A Handbook of Agile Software Craftsmanship, Robert C. Martin (e-book) - $35
+    Introduction to Algorithms, Thomas H. Corman (e-book) - $35 -->
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </section>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 
+</body>
 </html>
